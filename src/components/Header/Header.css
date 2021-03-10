@@ -7,11 +7,27 @@
 .header img{
     box-shadow: 1px 1px 100px white;
     border-radius: 40px;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 200px;
     height: 200px;
 }
 .header h1{
     color: white;
     padding-top: 70px;
+}
+nav{
+    display: flex;
+    text-align: end;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight:500;
+    color: lightgray;
+}
+nav a:hover{
+    text-decoration: none;
+    color: white;
 }

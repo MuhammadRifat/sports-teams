@@ -4,8 +4,10 @@ import { useParams } from 'react-router';
 import Header from '../Header/Header';
 import './TeamDetail.css';
 import malePhoto from '../../Photo/male.png';
+import femalePhoto from '../../Photo/female.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faClock, faFlag, faFutbol, faMars } from '@fortawesome/free-solid-svg-icons'
 
 const TeamDetail = () => {
     const {teamName} = useParams();
@@ -15,7 +17,6 @@ const TeamDetail = () => {
         .then(res => res.json())
         .then(data => setTeam(data.teams[0]))
     }, [teamName])
-    console.log(team);
     const {strTeamBadge, strTeam, strCountry, strSport, intFormedYear, strGender, strDescriptionEN, strStadiumDescription, strFacebook, strTwitter, strYoutube} = team;
     return (
         <div>
@@ -24,15 +25,17 @@ const TeamDetail = () => {
                 <Row className="team-details">
                     <Col md={7}>
                         <div className="team-info">
-                            <h1>{strTeam}</h1>
-                            <h4>Founded: {intFormedYear}</h4>
-                            <h4>Country: {strCountry}</h4>
-                            <h4>Sport Type: {strSport}</h4>
-                            <h4>Gender: {strGender}</h4>
+                            <h2>{strTeam}</h2>
+                            <h5><FontAwesomeIcon icon={faClock}/> Founded: {intFormedYear}</h5>
+                            <h5><FontAwesomeIcon icon={faFlag}/> Country: {strCountry}</h5>
+                            <h5><FontAwesomeIcon icon={faFutbol}/> Sport Type: {strSport}</h5>
+                            <h5><FontAwesomeIcon icon={faMars}/> Gender: {strGender}</h5>
                         </div>
                     </Col>
                     <Col md={5} className="team-img" alt="">
-                        <img src={malePhoto}/>
+                        {
+                            strGender && strGender.toLowerCase() === 'female' ? <img src={femalePhoto} alt=""/> : <img src={malePhoto} alt=""/>
+                        }
                     </Col>
                 </Row>
                 <p>

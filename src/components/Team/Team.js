@@ -15,7 +15,7 @@ const Team = (props) => {
     return (
         <Col md={4}>
             <div className="team">
-                <img src={strTeamBadge}/>
+                <img src={strTeamBadge} alt=""/>
                 <h3>{strTeam}</h3>
                 <span>Sports type: {strSport}</span><br/>
                 <button onClick={() => setUrl(strTeam)}>Explore <FontAwesomeIcon icon={faArrowRight}/></button>

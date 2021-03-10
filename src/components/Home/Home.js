@@ -12,7 +12,7 @@ const Home = () => {
         .then(data => setTeams(data.teams))
     }, [])
     return (
-        <div>
+        <div className="body">
             <Header></Header>
             <Container>
                 <Row>
