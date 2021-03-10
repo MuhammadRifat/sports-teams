@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 
 const Home = () => {
     const [teams, setTeams] = useState([]);
-    useEffect( () => {
+    useEffect( () => {      // For load data from web api
         fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League')
         .then(res => res.json())
         .then(data => setTeams(data.teams))

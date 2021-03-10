@@ -10,7 +10,7 @@ import { faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-i
 import { faClock, faFlag, faFutbol, faMars } from '@fortawesome/free-solid-svg-icons'
 
 const TeamDetail = () => {
-    const {teamName} = useParams();
+    const {teamName} = useParams();     // To take data from url
     const [team, setTeam] = useState([]);
     useEffect( () => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${teamName}`)
@@ -34,7 +34,7 @@ const TeamDetail = () => {
                     </Col>
                     <Col md={5} className="team-img" alt="">
                         {
-                            strGender && strGender.toLowerCase() === 'female' ? <img src={femalePhoto} alt=""/> : <img src={malePhoto} alt=""/>
+                            strGender && strGender.toLowerCase() === 'female' ? <img src={femalePhoto} alt=""/> : <img src={malePhoto} alt=""/>     // For conditional image
                         }
                     </Col>
                 </Row>
@@ -46,6 +46,7 @@ const TeamDetail = () => {
                         {strStadiumDescription}
                     </p>
                 </div>
+                {/* social link of team */}
                 <div className="social">
                     <a href={"https://"+strTwitter}><FontAwesomeIcon icon={faTwitter} size="4x"/></a>
                     <a href={"https://"+strFacebook}><FontAwesomeIcon icon={faFacebook} size="4x"/></a>

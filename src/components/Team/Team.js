@@ -6,12 +6,12 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router';
 
 const Team = (props) => {
-    const history = useHistory();
+    const history = useHistory();   // For changing url dynamically
     const setUrl = teamName => {
-        const url = `/team/${teamName}`;
+        const url = `/team/${teamName}`; // Set dynamic url
         history.push(url);
     }
-    const {strTeamBadge, strTeam, strSport} = props.team;
+    const {strTeamBadge, strTeam, strSport} = props.team; // Destructuring an object
     return (
         <Col md={4}>
             <div className="team">

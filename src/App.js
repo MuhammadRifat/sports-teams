@@ -11,6 +11,7 @@ import TeamDetail from './components/TeamDetail/TeamDetail';
 
 function App() {
   return (
+    // using react router
     <Router>
       <Switch>
         <Route path="/home">
