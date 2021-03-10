@@ -1,0 +1,24 @@
+.team{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.team img{
+    width: 60%;
+}
+.team button{
+    margin-top: 15px;
+    width: 60%;
+    height: 45px;
+    background-color: #3A42FF;
+    color: white;
+    border: 1px solid #3A42FF;
+    border-radius: 10px;
+}
+.team button:hover{
+    background-color: #070ed3;
+    box-shadow: 1px 1px 10px #3A42FF;
+    font-size: 17px;
+}
