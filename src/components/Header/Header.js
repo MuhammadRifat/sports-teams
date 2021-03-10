@@ -10,7 +10,7 @@ const Header = (props) => {
                     <a href="/home">Home</a>
                 </nav>
                 {
-                    props.teamLogo ? <img src={props.teamLogo} alt=""/> : <h1>Team Tracker</h1>
+                    props.teamLogo ? <img src={props.teamLogo} alt=""/> : <h1>Sports Teams</h1>
                 }
             </Container>
         </div>

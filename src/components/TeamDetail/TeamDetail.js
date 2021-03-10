@@ -19,7 +19,7 @@ const TeamDetail = () => {
     }, [teamName])
     const {strTeamBadge, strTeam, strCountry, strSport, intFormedYear, strGender, strDescriptionEN, strStadiumDescription, strFacebook, strTwitter, strYoutube} = team;
     return (
-        <div>
+        <div className="body">
             <Header teamLogo={strTeamBadge}></Header>
             <Container>
                 <Row className="team-details">
@@ -38,16 +38,18 @@ const TeamDetail = () => {
                         }
                     </Col>
                 </Row>
-                <p>
-                    {strDescriptionEN}
-                </p>
-                <p>
-                    {strStadiumDescription}
-                </p>
+                <div className="description">
+                    <p>
+                        {strDescriptionEN}
+                    </p>
+                    <p>
+                        {strStadiumDescription}
+                    </p>
+                </div>
                 <div className="social">
                     <a href={"https://"+strTwitter}><FontAwesomeIcon icon={faTwitter} size="4x"/></a>
                     <a href={"https://"+strFacebook}><FontAwesomeIcon icon={faFacebook} size="4x"/></a>
-                    <a href={"https://"+strYoutube}><FontAwesomeIcon icon={faYoutube} size="4x"/></a>
+                    <a style={{color:"#FF0000"}} href={"https://"+strYoutube}><FontAwesomeIcon icon={faYoutube} size="4x"/></a>
                 </div>
             </Container>
         </div>
